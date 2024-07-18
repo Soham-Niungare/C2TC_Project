@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="employee")
-public class Employee1 {
+public class Employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int employeeId;
@@ -32,12 +32,12 @@ public class Employee1 {
 	
 	
 	
-	public Employee1() {
+	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Employee1(String name, LocalDate dob, float salary, String address, String designation, Shop shop_id) {
+	public Employee(String name, LocalDate dob, float salary, String address, String designation, Shop shop_id) {
 		super();
 		this.name = name;
 		this.dob = dob;
@@ -47,7 +47,7 @@ public class Employee1 {
 		this.shop_id = shop_id;
 	}
 	
-	public Employee1(int id, String name, LocalDate dob, float salary, String address, String designation,
+	public Employee(int id, String name, LocalDate dob, float salary, String address, String designation,
 			Shop shop_id) {
 		super();
 		this.employeeId = id;

@@ -17,7 +17,7 @@ public class Shop {
 	String shopCategory;
 	@OneToOne()
 	@JoinColumn(name="employee_id")
-	Employee1 shopEmployeeID;
+	Employee shopEmployeeID;
 	@Column
 	String shopName;
 	@Column
@@ -33,7 +33,7 @@ public class Shop {
 	
 	
 	
-	public Shop(String shopCategory, Employee1 shopEmployeeID, String shopName, String customer,
+	public Shop(String shopCategory, Employee shopEmployeeID, String shopName, String customer,
 			List<ShopOwner> shopOwner, String leaveStatus, long id) {
 		super();
 		this.shopCategory = shopCategory;
@@ -44,7 +44,7 @@ public class Shop {
 		this.leaveStatus = leaveStatus;
 		this.id = id;
 	}
-	public Shop(int shopId, String shopCategory, Employee1 shopEmployeeID, String shopName, String customer,
+	public Shop(int shopId, String shopCategory, Employee shopEmployeeID, String shopName, String customer,
 			List<ShopOwner> shopOwner, String leaveStatus, long id) {
 		super();
 		this.shopId = shopId;
@@ -72,10 +72,10 @@ public class Shop {
 	public void setShopCategory(String shopCategory) {
 		this.shopCategory = shopCategory;
 	}
-	public Employee1 getShopEmployeeID() {
+	public Employee getShopEmployeeID() {
 		return shopEmployeeID;
 	}
-	public void setShopEmployeeID(Employee1 shopEmployeeID) {
+	public void setShopEmployeeID(Employee shopEmployeeID) {
 		this.shopEmployeeID = shopEmployeeID;
 	}
 	public String getShopName() {
